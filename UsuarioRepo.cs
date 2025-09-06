@@ -25,7 +25,7 @@ namespace Examen_Peñafiel.Datos.Repositorio
             paraNombre.Value = usuarios.Nombre;
 
             var paraApellidos = command.CreateParameter();
-            paraApellidos.ParameterName = "@APELLIDO";
+            paraApellidos.ParameterName = "@APELLIDOS";
             paraApellidos.Value = usuarios.Apellido;
 
             var paraEmail = command.CreateParameter();
@@ -121,4 +121,5 @@ namespace Examen_Peñafiel.Datos.Repositorio
         }
     }
 }
+
 
