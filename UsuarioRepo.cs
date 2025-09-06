@@ -17,7 +17,7 @@ namespace Examen_Peñafiel.Datos.Repositorio
         {
             _connection.Open();
             var command = _connection.CreateCommand();
-            command.CommandText = "INSERT INTO USUARIOS(NOMBRE, APELLIDOS, EMAIL) VALUES (@NOMBRE, @DESCRIPCION,@EMAIL) SELECT SCOPE_IDENTITY()";
+            command.CommandText = "INSERT INTO USUARIOS(NOMBRE, APELLIDOS, EMAIL) VALUES (@NOMBRE, @APELLIDOS,@EMAIL) SELECT SCOPE_IDENTITY()";
             command.CommandType = CommandType.Text;
 
             var paraNombre = command.CreateParameter();
@@ -121,3 +121,4 @@ namespace Examen_Peñafiel.Datos.Repositorio
         }
     }
 }
+
